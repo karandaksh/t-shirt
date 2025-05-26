@@ -1,24 +1,29 @@
 import React from 'react'
 // import SliderComponent from "@/component/ui/Slider"
 
-import SliderComponent from "@/components/ui/SliderComponent"
+import SliderComponent from "@/components/ui/SliderComponent";
+import CarouselComponent from "@/components/ui/CarouselComponent"
+// import sliderdata from '../../components/ui/CarouselComponent/sliderdata.json'
+import carouselData from '@/components/ui/CarouselComponent/CarouselData';
 
-import ironman from "@/assets/images/ironman.png"
-import batman from "@/assets/images/batman.png"
-import avengers from "@/assets/images/avengers.png"
-import captainamerica from "@/assets/images/captainamerica.png"
-import superman from "@/assets/images/superman.png"
-import thor from "@/assets/images/thor.png"
-import thor1 from "@/assets/images/thor1.png"
-import loki from "@/assets/images/loki.png"
-import marvel from "@/assets/images/marvel.png"
-import flash from "@/assets/images/flash.png"
-import blackwidow from "@/assets/images/blackwidow.png"
-import isro from "@/assets/images/isro.png"
-import nasa from "@/assets/images/nasa.png"
-import hulk from "@/assets/images/hulk.png"
-import spiderman from "@/assets/images/spiderman.png"
-import spiderman1 from "@/assets/images/spiderman1.png"
+import ironman from "@/assets/images/logos/ironman.png";
+import batman from "@/assets/images/logos/batman.png";
+import avengers from "@/assets/images/logos/avengers.png";
+import captainamerica from "@/assets/images/logos/captainamerica.png";
+import superman from "@/assets/images/logos/superman.png";
+import thor from "@/assets/images/logos/thor.png";
+import thor1 from "@/assets/images/logos/thor1.png";
+import loki from "@/assets/images/logos/loki.png";
+import marvel from "@/assets/images/logos/marvel.png";
+import flash from "@/assets/images/logos/flash.png";
+import blackwidow from "@/assets/images/logos/blackwidow.png";
+import isro from "@/assets/images/logos/isro.png";
+import nasa from "@/assets/images/logos/nasa.png";
+import hulk from "@/assets/images/logos/hulk.png";
+import spiderman from "@/assets/images/logos/spiderman.png";
+import spiderman1 from "@/assets/images/logos/spiderman1.png";
+
+
 
 
 const index = () => {
@@ -43,15 +48,30 @@ const index = () => {
     { image: blackwidow, alt: 'Image12' },
   ]
 
+
+
+
+
+
   return (
     <>
-   
+
       {/* <SliderComponent>
       </SliderComponent> */}
 
       <SliderComponent items={logos} renderItem={(item) => (
-            <img src={item.image} alt={item.alt} />
-        )} />
+        <img src={item.image} alt={item.alt} />
+      )} />
+
+
+      <div className="mt-4 pt-4">
+        <CarouselComponent slides={carouselData} ></CarouselComponent>
+      </div>
+
+
+
+kjsdvnsk
+
 
 
     </>

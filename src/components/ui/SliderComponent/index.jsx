@@ -45,62 +45,12 @@
 
 import React from "react";
 import Slider from "react-slick";
+import settings from "./settings.js"; //This is Js File or Slider Js
+
 
 function index({ items = [], renderItem }) {
 
 
-    const settings = {
-        // dots: true,
-        // infinite: true,
-        // slidesToShow: 8,
-        // slidesToScroll: 1,
-        // autoplay: true,
-        // speed: 200,
-        // autoplaySpeed: 5000,
-        // cssEase: "linear",
-
-    dots: false,
-    arrows:false,
-    infinite: true,
-    slidesToShow: 9,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 0,
-    pauseOnHover:false,
-    cssEase: "linear",
-
-        
-        
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
-    //  if(!items.length) return null;
     const defaultItems = [
         {
             image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07",
@@ -124,16 +74,21 @@ function index({ items = [], renderItem }) {
     const finalItems = items && items.length ? items : defaultItems;
 
 
+
+
+
     const DefaultSlide = ({ item }) => (
         <div className="bg-gray-100 p-4 rounded shadow">
-
             <img src={item.image} alt={item.alt} className="w-full h-40 object-cover" />
-
             {/* <img src={item?.image || "https://via.placeholder.com/300/200"} alt={item?.alt || "Default Image"} className="w-full h-40 object-cover" /> */}
             {/* <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" alt={item.alt} className="w-full h-40 object-cover" /> */}
-
         </div>
     );
+
+
+
+
+
 
     return (
         <div className="slider-container px-2">
